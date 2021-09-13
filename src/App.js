@@ -1,10 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { useEffect, useRef } from "react";
-import image from "./App2.jpeg";
+import { useRef } from "react";
 import vision from "react-cloud-vision-api";
 
-vision.init({ auth: "AIzaSyAVGWa5DCz5fIIc6Mv69BLTW8t83_C08ZQ" });
+vision.init({ auth: process.env.REACT_APP_API });
 
 function App() {
   const profile = useRef();
